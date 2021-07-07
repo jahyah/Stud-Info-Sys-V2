@@ -7,7 +7,7 @@ import tkinter.messagebox
 import csv
 import os
 import sqlite3
-#import SSISv2_backend
+
 
 LARGE_FONT= ("Verdana", 20)
 
@@ -251,11 +251,7 @@ class Student(tk.Frame):
         label2.place(x=15,y=10)
         
         
-        """
-        icon1 = ImageTk.PhotoImage(Image.open("searchicon.png"))
-        label1 = tk.Label(image=icon1)
-        label1.place(x=1117,y=105)
-        """
+        
 
         ##=============================================WindowBtn=====================================##
         button2 = tk.Button(self, text="Course",font=("Verdana",10,"bold"),bd=0,
@@ -280,7 +276,6 @@ class Student(tk.Frame):
         Student_Name = StringVar()       
         Student_YearLevel = StringVar()
         Student_Gender = StringVar()
-        #Student_Course = StringVar()
         Course_Code = StringVar()
         SearchBar_Var = StringVar()
         
@@ -468,7 +463,7 @@ class Student(tk.Frame):
         self.SearchBar = Entry(self, font=("Poppins", 11), textvariable=SearchBar_Var, width=29)
         self.SearchBar.place(x=800,y=110)
         self.SearchBar.insert(0,'Search ID here')
-        self.lblOwner = Label(self, font=("Poppins", 11), text="Submitted by: Martinez, Ryan James J.", bg ="gray15", fg="snow")
+        
         
 
         ##=========================Treeview==============================##
@@ -536,7 +531,7 @@ class Student(tk.Frame):
         
         connect()
         displayData()
-        #searchData()
+        
 
 app = App()
 app.geometry("1260x600")
